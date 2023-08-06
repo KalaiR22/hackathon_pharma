@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Issue Tablets</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="tabrec.css">
+    
+</head>
+
+<body><div class="inputwrap">
+    <h1>Find Tablets for Health Issues</h1>
+    <p>Enter the health issue (e.g., fever, common cold, influenza, headaches, allergies, back pain, fatigue) to find
+        recommended tablets:</p>
+    <div class="result">
+    <input type="text" id="healthIssueInput" placeholder="Enter health issue">
+    <button onclick="findTablets()" class="btn  btn-primary rounded-pill">Find Tablets</button>
+    </div>
+    </div>
+    <div class="tabletList">
+    <div id="tabletList">
+        <!-- The list of tablets will be dynamically populated here -->
+    </div>
+    </div>
+
+    <script src="tabrec.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

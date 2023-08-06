@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="detailsget.css">
+</head>
+
+<body>
+    <div class="inputwrap">
+        <h3 class="head">ENTER THE TABLET OR COMPONENT NAME</h3>
+        <div class="optionwrap">
+            <label>
+                <input type="radio" name="option" value="option1" onclick="displayContent()" />
+                Option 1
+            </label>
+            <label>
+                <input type="radio" name="option" value="option2" onclick="displayContent()" />
+                Option 2
+            </label>
+        </div>
+
+        <div id="content">
+            <!-- Content will be displayed here -->
+        </div>
+        <div id="componentFieldsContainer">
+            <!-- Component input fields will be added here -->
+        </div>
+
+        <div class="submit">
+            <button onclick="getComponentNames()" class="btn  btn-primary rounded-pill"><a href="index.html">Submit</a></button>
+        </div>
+    </div>
+
+    <script>
+        function displayContent() {
+            const option1Content = `<div class="medinp">
+                                        <label for="medicineName">Enter Medicine Name:</label>
+                                        <input type="text" id="medicineName" placeholder="Type the medicine name here...">
+                                    </div>`;
+            const option2Content = `<div class="cominp">
+                                        <label for="numComponents">Select Number of Components:</label>
+                                        <select id="numComponents" onchange="createInputFields()">
+                                            <option value="1">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <!-- Add more options as needed -->
+                                        </select>
+                                    </div>`;
+
+            const contentDiv = document.getElementById('content');
+            const selectedOption = document.querySelector('input[name="option"]:checked').value;
+
+            if (selectedOption === 'option1') {
+                contentDiv.innerHTML = option1Content;
+            } else if (selectedOption === 'option2') {
+                contentDiv.innerHTML = option2Content;
+            }
+        }
+
+        function createInputFields() {
+            const numComponentsSelect = document.getElementById("numComponents");
+            const numComponents = parseInt(numComponentsSelect.value);
+
+            const container = document.getElementById("componentFieldsContainer");
+            container.innerHTML = ""; // Clear previous input fields
+
+            for (let i = 0; i < numComponents; i++) {
+                const inputField = document.createElement("input");
+                inputField.type = "text";
+                inputField.placeholder = "Enter Component " + (i + 1) + " Name";
+                container.appendChild(inputField);
+            }
+        }
+
+        function getComponentNames() {
+            const numComponentsSelect = document.getElementById("numComponents");
+            const numComponents = parseInt(numComponentsSelect.value);
+
+            const componentNames = [];
+            for (let i = 0; i < numComponents; i++) {
+                const inputField = document.getElementById("component" + i);
+                componentNames.push(inputField.value);
+            }
+
+            // You can use the componentNames array to process or display the entered component names
+            // For now, let's just display them in an alert
+            alert("You entered the following component names:\n" + componentNames.join("\n"));
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

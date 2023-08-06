@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="inputwrap">
+    <div class="medinp">
+        <label for="medicineName" class="lab">Medicine Name:</label>
+        <label for="medicineName" class="lab">Crocin </label>
+    </div>
+    <div class="cominp">
+     <!-- <label for="numComponents" class="lab">Component name:</label>
+     <label for="numComponents" class="lab">Component1, component2</label> -->
+        </div>
+        <div id="componentFieldsContainer">
+            <!-- Component input fields will be added here -->
+        </div>
+        
+        
+    </div>
+    <div class="slidesdis">
+    <div class="slide1">
+        <h4 class="title">USE CASE</h4>
+    <div class="slideshow-container square-container">
+        <!-- Slides (words) -->
+        <div class="slide active ">Fever</div>
+        <div class="slide">Moderate pain</div>
+        <div class="slide">Headaches</div>
+    
+        <!-- Arrow buttons -->
+        <div class="prev" onclick="navigate(-1)">&#10094;</div>
+        <div class="next" onclick="navigate(1)">&#10095;</div>
+    
+        <!-- Square container -->
+        <!-- <div class="square-container">
+                
+                <p>This is centered content.</p>
+            </div> -->
+    </div>
+    </div>
+    <div class="slide1">
+        <h4 class="title">ORGANIC FOOD</h4>
+    <div class="slideshow-container square-container">
+    <!-- Slides (words) -->
+    <div class="word-slide active">Ginger</div>
+    <div class="word-slide">Garlic</div>
+    <div class="word-slide">Peppermint</div>
+
+    <!-- Arrow buttons -->
+    <div class="word-prev" onclick="navigateWords(-1)">&#10094;</div>
+    <div class="word-next" onclick="navigateWords(1)">&#10095;</div>
+</div>
+</div>
+</div>
+        <script>
+            function createInputFields() {
+                const numComponentsSelect = document.getElementById("numComponents");
+                const numComponents = parseInt(numComponentsSelect.value);
+
+                const container = document.getElementById("componentFieldsContainer");
+                container.innerHTML = ""; // Clear previous input fields
+
+                for (let i = 0; i < numComponents; i++) {
+                    const inputField = document.createElement("input");
+                    inputField.type = "text";
+                    inputField.placeholder = "Enter Component " + (i + 1) + " Name";
+                    container.appendChild(inputField);
+                }
+            }
+
+            function getComponentNames() {
+                const numComponentsSelect = document.getElementById("numComponents");
+                const numComponents = parseInt(numComponentsSelect.value);
+
+                const componentNames = [];
+                for (let i = 0; i < numComponents; i++) {
+                    const inputField = document.getElementById("component" + i);
+                    componentNames.push(inputField.value);
+                }
+
+                // You can use the componentNames array to process or display the entered component names
+                // For now, let's just display them in an alert
+                alert("You entered the following component names:\n" + componentNames.join("\n"));
+            }
+
+            // JavaScript to handle the slideshow
+                const slides = document.querySelectorAll('.slide');
+                let currentSlide = 0;
+
+                function showSlide(n) {
+                    slides.forEach((slide) => {
+                        slide.classList.remove('active');
+                    });
+
+                    currentSlide = (n + slides.length) % slides.length;
+                    slides[currentSlide].classList.add('active');
+                }
+
+                function navigate(direction) {
+                    showSlide(currentSlide + direction);
+                }
+
+                // Start the slideshow when the page loads
+                showSlide(currentSlide);
+
+                // Auto-advance the slideshow every 3 seconds (adjust as needed)
+                setInterval(() => navigate(1), 3000);
+
+                 const wordSlides = document.querySelectorAll('.word-slide');
+                    let currentWordSlide = 0;
+
+                    function showWordSlide(n) {
+                        wordSlides.forEach((slide) => {
+                            slide.classList.remove('active');
+                        });
+
+                        currentWordSlide = (n + wordSlides.length) % wordSlides.length;
+                        wordSlides[currentWordSlide].classList.add('active');
+                    }
+
+                    function navigateWords(direction) {
+                        showWordSlide(currentWordSlide + direction);
+                    }
+
+                    // Start the word slideshow when the page loads
+                    showWordSlide(currentWordSlide);
+
+                    // Auto-advance the word slideshow every 3 seconds (adjust as needed)
+                    setInterval(() => navigateWords(1), 3000)
+        </script>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+   
+
+</body>
+</html>

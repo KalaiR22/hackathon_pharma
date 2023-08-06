@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Organic Food Recommendation</title>
+    <link rel="stylesheet" href="tabalter.css">
+</head>
+
+<body>
+    <div>
+        <div class="inputwrap">
+        <h1>ALTERNATIVE AYURVEDIC TABLET</h1>
+        <input type="text" id="search-bar" placeholder="Enter tablet name">
+        </div>
+        <div class="results">
+        <div id="results"></div>
+        </div>
+    </div>
+
+    <script>
+        // Sample data (you can replace this with a real database and backend)
+        const tabletData = [
+            { name: 'Crocin', isOrganic: true, recommendation: "Sudarsana tablets", cure: "relief from pain, infections, and other concerns, such as loss of appetite." },
+            { name: 'Allegra', isOrganic: false, recommendation: 'Histantin', cure: "relieve allergic symptoms from root, purify the blood, relieve respiratory concerns, boost your immunity, manage skincare concerns such as food and drug allergies'" },
+            { name: 'Afrin', isOrganic: true, recommendation: 'Anu Thailam', cure: "relieve many respiratory concerns. From nasal congestion to blocked nose and sinuses, calm your mind, relieve pain because of blocked sinuses, and relieve headaches and pains associated with respiratory concerns." },
+            { name: 'Laxatives', isOrganic: true, recommendation: 'Triphala', cure: "manage various digestive concerns, and other concerns related to or caused by digestive problems. It can help relieve constipation, abdominal pain, flatulence, and improper bowel movements. Kerala Ayurveda Triphala Tablets and effervescent Triphala Sparkles can make its consumption easier and more effective." },
+            { name: 'Antacids', isOrganic: true, recommendation: 'Alsactil Tablet', cure: "provide relief from hyperacidity and flatulence. It’s a natural digestive composed of extracts and powders of powerful herbs known to aid digestion and reduce acid secretion in the stomach. This unique formulation can help protect gastric health and improve appetite." },
+            { name: 'Paracetamol', isOrganic: true, recommendation: 'Sudarsana tablets', cure: "offer relief from pain and can also help deal with many infections and other concerns, such as loss of appetite." },
+
+            // Add more sample data as needed
+        ];
+
+        // Function to search for the tablet and display the recommendation
+        function searchTablet() {
+            const searchInput = document.getElementById('search-bar').value;
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = '';
+
+            const matchedTablet = tabletData.find(tablet => tablet.name.toLowerCase() === searchInput.toLowerCase());
+
+            if (matchedTablet) {
+                const recommendation = matchedTablet.isOrganic ? matchedTablet.recommendation : 'No organic food recommendation available.';
+                const cure = matchedTablet.cure || 'Cure information not available.';
+                resultsDiv.innerHTML = `<p><strong>${matchedTablet.name}</strong></p><p>Ayurvedic Tablet: ${recommendation}</p><p>Cure: ${cure}</p>`;
+            } else {
+                resultsDiv.innerHTML = '<p>No matching tablet found.</p>';
+            }
+        }
+
+        // Event listener to trigger the search on input change
+        document.getElementById('search-bar').addEventListener('input', searchTablet);
+    </script>
+</body>
+
+</html>

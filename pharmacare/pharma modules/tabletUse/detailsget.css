@@ -1,0 +1,156 @@
+body {
+    background-color:#1b71a1;
+    background-image: url(/pharmacare/src/images/doctors-bg.png);
+}
+
+.inputwrap {
+    background-color: #FFFFFF;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 200px;
+    padding: 25px;
+}
+
+.btn-primary {
+    color: #FFFEFE;
+    background-color: #283779;
+    border-color: #283779;
+
+}
+
+.btn-primary:hover {
+    color: #FFFEFE;
+    background-color: #222f67;
+    border-color: #202c61;
+}
+
+.medinp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4px;
+}
+
+.cominp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4px;
+}
+
+#componentFieldsContainer {
+    padding: 2px;
+}
+
+#componentFieldsContainer input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8px;
+}
+.submit a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    color: #1B71A1;
+}
+
+.optionwrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input,
+select {
+    margin: 4px;
+}
+ @media screen and (min-width: 900px) {
+     #componentFieldsContainer {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+
+         /* Change to block layout when screen size is smaller */
+     }
+
+     #componentFieldsContainer input {
+         margin: 4px;
+
+         /* Change to block layout when screen size is smaller */
+     }
+     .head{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 25px;
+     }
+
+     .inputwrap {
+         background-color: #FFFFFF;
+         margin-left: 12%;
+         margin-right: 12%;
+         margin-top: 200px;
+         padding: 50px;
+        
+     }
+         .optionwrap {
+             display: flex;
+             justify-content: center;
+             align-items: center;
+         }
+
+     .btn-primary {
+         color: #FFFEFE;
+         background-color: #283779;
+         border-color: #283779;
+
+     }
+
+     .btn-primary:hover {
+         color: #FFFEFE;
+         background-color: #222f67;
+         border-color: #202c61;
+     }
+
+     .medinp {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         margin: 4px;
+     }
+
+     .cominp {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         margin: 4px;
+     }
+
+
+     .submit {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         margin: 8px;
+     }
+
+     input,
+     select {
+         margin: 4px;
+     }
+    }

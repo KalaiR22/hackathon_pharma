@@ -1,0 +1,426 @@
+body {
+    background-color: #1b71a1;
+    background-image: url(/pharmacare/src/images/doctors-bg.png);
+}
+
+.inputwrap{
+    background-color: #FFFFFF;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 30px;
+    padding: 25px;
+    border-radius: 15px;
+}
+.btn-primary {
+    color: #FFFEFE;
+    background-color: #283779;
+    border-color: #283779;
+    
+}
+.lab{
+    color:#1f75a3;
+    font-weight: bold;
+   
+}
+.btn-primary:hover {
+    color: #FFFEFE;
+    background-color: #222f67;
+    border-color: #202c61;
+}
+
+.medinp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4px;
+}
+
+.cominp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4px;
+}
+#componentFieldsContainer{
+    padding: 2px;
+}
+ #componentFieldsContainer input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+ }
+.submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8px;
+}
+
+input, select{
+    margin: 4px;
+}
+
+/* Basic styles for the slideshow container */
+.slideshow-container {
+    max-width: 400px;
+   
+    position: relative;
+}
+.slidesdis{
+    
+   
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top:5px;
+   
+
+}
+
+.slide1{
+background-color: #FFFEFE;
+width: 100%;
+margin-top:10px ;
+margin-bottom: 10px;
+padding: 40px;
+}
+/* Styles for the slides (words) */
+.slide {
+    display: none;
+    color: #7B7A8B;
+    font-size: larger;
+}
+
+/* Style for the active slide */
+.slide.active {
+    display: block;
+}
+
+/* Styles for arrow buttons */
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    cursor: pointer;
+    background-color:#283779;
+    color: #FFFEFE;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+
+}
+
+.prev {
+    left: 0;
+    margin-left: 15px;
+}
+
+.next {
+    right: 0;
+    margin-right: 15px;
+}
+
+/* Styles for the square container */
+
+
+/* Basic styles for the slideshow container */
+
+/* Styles for the slides (words) */
+.word-slide {
+    display: none;
+    color: #7B7A8B;
+    font-size: larger;
+}
+
+/* Style for the active slide */
+.word-slide.active {
+    display: block;
+}
+ /* Styles for arrow buttons */
+ .word-prev,
+ .word-next {
+     position: absolute;
+     top: 50%;
+     transform: translateY(-50%);
+     font-size: 24px;
+     cursor: pointer;
+    background-color: #283779;
+        color: #FFFEFE;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+ }
+
+ .word-prev {
+     left: 0;
+    margin-left: 15px;
+ }
+
+ .word-next {
+     right: 0;
+    margin-right: 15px;
+ }
+  /* Styles for the square container */
+  .square-container {
+      width: 350px;
+      height: 350px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      background-color:#91c8e4ac ;
+      border-radius: 10px;
+  }
+
+  /* Styles for the component container */
+  .component-container {
+      max-width: 400px;
+      margin: auto;
+      text-align: center;
+  }
+  /* Styles for the component input fields */
+  .component-input {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+  }
+
+  /* Styles for the submit button */
+  .submit-button {
+      margin-top: 10px;
+  }
+  .title{
+    display: flex;
+    justify-content: center;
+        align-items: center;
+        color:#1B71A1 ;
+  }
+ @media screen and (min-width: 900px) {
+    #componentFieldsContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+         /* Change to block layout when screen size is smaller */
+     }
+         #componentFieldsContainer input{
+             margin: 4px;
+    
+             /* Change to block layout when screen size is smaller */
+         }
+         .inputwrap {
+             background-color: #FFFFFF;
+             margin-left: 12%;
+             margin-right: 12%;
+             margin-top: 30px;
+             padding: 25px;
+         }
+    
+         .btn-primary {
+             color: #FFFEFE;
+             background-color: #283779;
+             border-color: #283779;
+    
+         }
+    
+         .btn-primary:hover {
+             color: #FFFEFE;
+             background-color: #222f67;
+             border-color: #202c61;
+         }
+    
+         .medinp {
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             margin: 4px;
+         }
+    
+         .cominp {
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             margin: 4px;
+         }
+    
+         
+         .submit {
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             margin: 8px;
+         }
+    
+         input,
+         select {
+             margin: 4px;
+         }
+
+         /* Basic styles for the slideshow container */
+         .slideshow-container {
+             max-width: 400px;
+    
+             position: relative;
+         }
+    
+         .slidesdis {
+             display: flex;
+    
+             margin-left: 12%;
+             margin-right: 12%;
+             margin-top: 5px;
+    
+    
+         }
+    
+         .slide1 {
+             background-color: #FFFEFE;
+             width: 50%;
+             margin: 10px;
+             padding: 50px;
+         }
+    
+         /* Styles for the slides (words) */
+         .slide {
+             display: none;
+             color: #7B7A8B;
+             font-size: larger;
+         }
+    
+         /* Style for the active slide */
+         .slide.active {
+             display: block;
+         }
+    
+         /* Styles for arrow buttons */
+         .prev,
+         .next {
+             position: absolute;
+             top: 50%;
+             transform: translateY(-50%);
+             font-size: 24px;
+             cursor: pointer;
+             background-color: #283779;
+             color: #FFFEFE;
+             width: 30px;
+             height: 30px;
+             border-radius: 50%;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             margin: 5px;
+    
+         }
+    
+         .prev {
+             left: 0;
+             margin-left: 15px;
+         }
+    
+         .next {
+             right: 0;
+             margin-right: 15px;
+         }
+    
+         /* Styles for the square container */
+    
+    
+         /* Basic styles for the slideshow container */
+    
+         /* Styles for the slides (words) */
+         .word-slide {
+             display: none;
+             color: #7B7A8B;
+             font-size: larger;
+         }
+    
+         /* Style for the active slide */
+         .word-slide.active {
+             display: block;
+         }
+    
+         /* Styles for arrow buttons */
+         .word-prev,
+         .word-next {
+             position: absolute;
+             top: 50%;
+             transform: translateY(-50%);
+             font-size: 24px;
+             cursor: pointer;
+             background-color: #283779;
+             color: #FFFEFE;
+             width: 30px;
+             height: 30px;
+             border-radius: 50%;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+    
+         }
+    
+         .word-prev {
+             left: 0;
+             margin-left: 15px;
+         }
+    
+         .word-next {
+             right: 0;
+             margin-right: 15px;
+         }
+    
+         /* Styles for the square container */
+         .square-container {
+             width: 350px;
+             height: 350px;
+             margin: auto;
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+             align-items: center;
+             overflow: hidden;
+             background-color: #91c8e4ac;
+             border-radius: 10px;
+         }
+    
+         /* Styles for the component container */
+         .component-container {
+             max-width: 400px;
+             margin: auto;
+             text-align: center;
+         }
+    
+         /* Styles for the component input fields */
+         .component-input {
+             display: block;
+             width: 100%;
+             padding: 10px;
+             margin-bottom: 10px;
+             border: 1px solid #ccc;
+             border-radius: 5px;
+             box-sizing: border-box;
+         }
+    
+         /* Styles for the submit button */
+         .submit-button {
+             margin-top: 10px;
+         }
+     
+ }

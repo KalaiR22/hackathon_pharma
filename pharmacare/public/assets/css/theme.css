@@ -485,6 +485,11 @@ progress {
   font-weight: 900;
   line-height: 1;
 }
+.container .text-600{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
 
 @media (min-width: 1200px) {
   .display-1 {

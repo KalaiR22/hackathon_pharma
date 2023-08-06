@@ -1,0 +1,46 @@
+body {
+    background-color: #1b71a1;
+    background-image: url(/pharmacare/src/images/doctors-bg.png);
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+}
+
+.image {
+    flex: 1;
+    padding: 20px;
+    background: #ffffff;
+    height:500px;
+    width: 35%;
+    margin-right: 15px;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.res{
+    padding:20px;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    background-color: #ffffff;
+    height: 500px;
+    width: 35%;
+    margin-left:15px ;
+}

@@ -1,0 +1,51 @@
+body {
+    background-color: #1b71a1;
+    background-image: url(/pharmacare/src/images/doctors-bg.png);
+    font-family: Arial, sans-serif;
+}
+ 
+
+ #search-bar {
+     width: 300px;
+     padding: 10px;
+     font-size: 16px;
+     border-radius: 20px;
+ }
+
+ #results {
+     margin-top: 10px;
+    display: flex;
+        flex-direction: column;
+        /* Align items vertically in every line */
+        justify-content: center;
+        /* Horizontally center items in every line */
+        align-items: center;
+        color: #333;
+        
+ }
+
+ .results{
+    margin-left: 12%;
+        margin-right: 12%;
+        margin-top: 20px;
+        padding: 25px;
+        border-radius: 15px;
+        background-color: #FFFFFF;
+        color: #333;
+ }
+ .inputwrap {
+     background-color: #FFFFFF;
+     margin-left: 12%;
+     margin-right: 12%;
+    margin-top: 120px;
+     padding: 25px;
+     border-radius: 15px;
+    display: flex;
+        flex-direction: column;
+        /* Align items vertically in every line */
+        justify-content: center;
+        /* Horizontally center items in every line */
+        align-items: center;
+
+ }
+ 

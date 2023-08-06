@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Upload Image or Drag and Drop</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="imgupld.css">
+    
+</head>
+
+<body>
+    <div class="inputwrap">
+    <div id="dropArea" ondragover="handleDragOver(event)" ondrop="handleDrop(event)">
+        <i class="fa fa-upload"></i>
+        <p>Drag and drop an image here or</p>
+        <input type="file" id="fileInput" accept="image/*"  class="btn  btn-primary rounded-pill" onchange="handleFileSelect(event) ">
+    </div>
+    </div>
+    <div class="submit">
+    <button class="btn btn-primary rounded-pill"><a href="imgresult.html">submit</a></button>
+    </div>
+    
+
+    <script>
+        function handleDragOver(event) {
+            event.preventDefault();
+            event.dataTransfer.dropEffect = "copy";
+        }
+
+        function handleDrop(event) {
+            event.preventDefault();
+            const file = event.dataTransfer.files[0];
+            handleFile(file);
+        }
+
+        function handleFileSelect(event) {
+            const file = event.target.files[0];
+            handleFile(file);
+        }
+
+        function handleFile(file) {
+            const dropArea = document.getElementById("dropArea");
+            const preview = document.getElementById("preview");
+
+            // Check if the uploaded file is an image
+            if (file.type.match(/^image\//)) {
+                // Display the image
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const image = new Image();
+                    image.src = e.target.result;
+                    preview.innerHTML = ""; // Clear previous preview
+                    preview.appendChild(image);
+                };
+                reader.readAsDataURL(file);
+                dropArea.style.border = "2px dashed #ccc";
+            } else {
+                preview.innerHTML = "<p>Invalid file type. Please upload an image.</p>";
+                dropArea.style.border = "2px dashed red";
+            }
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
